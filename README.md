@@ -21,10 +21,17 @@ Exemplo:
 de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no cadastro)
 
 <br>
-<h2> :dart: Telas Realizadas</h2>
-<h3> Tela Incial</h3>
-![](https://github.com/peonia-api/API_5_Semestre/blob/main/videos/Login_Opera%C3%A7%C3%A3o.gif)
+<h2> 📋 Telas Realizadas</h2>
+<h3> Tela Gestão de Aeronaves </h3>
 
+![image](https://github.com/diiegobsilva/Desafio/blob/main/img/TelaBase.png)
+
+<h3> Tela Editar Aeronave</h3>
+
+
+![image](https://github.com/diiegobsilva/Desafio/blob/main/img/TelaEditar.png)
+
+<h2> 💻 Vídeo Funcionamento</h2>
 
 <br>
 <h1 align="center"> Documentação das rotas</br> Entendendo a lógica da API desenvolvida neste projeto. </h1>
