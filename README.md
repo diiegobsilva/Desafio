@@ -70,6 +70,8 @@ de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no ca
 <h2>Vídeo de como rodar</h2>
 
 
+![](https://github.com/diiegobsilva/Desafio/blob/main/img/PassoaPasso.gif)
+
 
 
 <h1 align="center"> Documentação das rotas</br> Entendendo a lógica da API desenvolvida neste projeto. </h1>
