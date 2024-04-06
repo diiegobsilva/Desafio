@@ -36,6 +36,42 @@ de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no ca
 ![](https://github.com/diiegobsilva/Desafio/blob/main/img/FuncinamentoGif.gif)
 
 <br>
+
+<h2> A passo a passo para Rodar o Projeto (Comandos Básicos)</h2>
+
+<h3>Server</h3>
+
+    1º) (WorkBench) - CREATE DATABASE projeto;
+  
+    2º) É necessario colocar a sua senha do WorkBench no arquivo data-soucer.ts (password).
+  
+    3º) cd .\server\
+  
+    4º) npm i
+
+    5º) npm run migration:generate
+  
+    6º) CRT+C
+  
+    7º) npm run migration:run
+  
+    8º) CRT+C
+  
+    9º) npm run dev
+
+<h3>Front</h3>
+
+    1º) cd .\front-end\
+  
+    2º) npm i
+  
+    3º) npm start
+
+<h2>Vídeo de como rodar</h2>
+
+
+
+
 <h1 align="center"> Documentação das rotas</br> Entendendo a lógica da API desenvolvida neste projeto. </h1>
 <h2> 📔 MÉTODO: POST (AERONAVE)</h2>
 
