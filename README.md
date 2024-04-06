@@ -20,16 +20,14 @@ Exemplo:
 • Deverá haver consistência nos nomes dos fabricantes. Não poderá haver nomes escritos
 de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no cadastro)
 
-
-<br id="topo">
-
-<h1 align="center"> Documentação das rotas</br> Entendendo a lógica da API desenvolvida neste projeto. </h1>
-<h2> :dart: Objetivo</h2>
-
-<p align="justify"> Este documento tem por objetivo estabeler a documentação das rotas (requisições) constantes dentro deste projeto. Dessa forma, torna-se possível e mais fácil o entendimento do funcionamento da API criada no Back para consumo no Front, estabelecendo a lógica de funcionamento do aplicativo e os parâmetros necessários para cada método utilizado.</p>
 <br>
+<h2> :dart: Telas Realizadas</h2>
+<h3> Tela Incial</h3>
+![](https://github.com/peonia-api/API_5_Semestre/blob/main/videos/Login_Opera%C3%A7%C3%A3o.gif)
 
 
+<br>
+<h1 align="center"> Documentação das rotas</br> Entendendo a lógica da API desenvolvida neste projeto. </h1>
 <h2> 📔 MÉTODO: POST (AERONAVE)</h2>
 
 <p align="justify"> Requisição, via JSON, para a criação de uma aeronave no Banco de Dados.</p>
