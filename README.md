@@ -62,144 +62,139 @@ de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no ca
 
 ```json
 {
-  "id": 9,
-  "nome": "E3222",
-  "marca": "Embraer",
-  "ano": 2017,
-  "descricao": "Segundo",
-  "vendido": true,
-  "created": "2024-04-03T19:15:55.972Z",
-  "updated": "2024-04-04T22:21:28.000Z" 
+ "id": 9,
+ "nome": "E3222",
+ "marca": "Embraer",
+ "ano": 2017,
+ "descricao": "Segundo",
+ "vendido": true,
+ "created": "2024-04-03T19:15:55.972Z",
+ "updated": "2024-04-04T22:21:28.000Z"
+},
+{
+ "id": 12,
+ "nome": "2321",
+ "marca": "Boeing",
+ "ano": 2003,
+ "descricao": "dwww",
+ "vendido": false,
+ "created": "2024-04-04T16:48:10.864Z",
+ "updated": "2024-04-04T16:48:10.864Z"
+},
+{
+ "id": 18,
+ "nome": "rerewrw",
+ "marca": "Boeing",
+ "ano": 2012,
+ "descricao": "3rewwr",
+ "vendido": true,
+ "created": "2024-04-04T18:16:58.204Z",
+ "updated": "2024-04-04T18:16:58.204Z"
 }
 ```
 
 
-<h2> 📔 MÉTODO: GET pelo parâmetro (AERONAVE)</h2>
+<h2> 📔 MÉTODO: GET Decada (AERONAVE)</h2>
 
-<p align="justify"> Requisição para busca e exibição de Aeronave identificado pelo pelo parâmetro passado, retornando o resultado no formado JSON.</p>
+<p align="justify"> Requisição para busca e exibição de aeronaves por década de fabricação, retornando o resultado no formado JSON.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
-**http://localhost:3001/equipment/listOne/650daa56a3c4ce65afb9b862**
+**http://localhost:3001/aeronaves/decada**
 
 <p align="justify"> Exemplo:</p>
 
 ```json
 {
-        "_id": "650daa56a3c4ce65afb9b862",
-        "type": "Poste",
-        "numero": "628",
-        "serial": "D-KYEUGG2877",
-        "latitude": "12.4569",
-        "longitude": "10.4578",
-        "observations": "Necessita de manutenção",
-        "url": [
-            "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/imagens/D-KYEUGG28770.19592657284536147.jpeg"
-        ],
-        "status": true
-    }
+ "2000": 1,
+ "2010": 2
+}
+
 ```
 
-<h2> 📔 MÉTODO: GET (USER)</h2>
+<h2> 📔 MÉTODO: GET Ultima Semana (AERONAVE)</h2>
 
-<p align="justify"> Requisição para a listagem de todos os Usuários cadastrados no aplicativo, retornando os resultados no formado JSON.</p>
+<p align="justify"> Requisição para busca e exibição de aeronaves registradas durante a última semana, retornando o resultado no formado JSON.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
-**http://localhost:3000/user/historicUser**
+**http://localhost:3001/aeronaves/ultima-semana**
 
 <p align="justify"> Exemplo:</p>
 
 ```json
 {
-        "id": 32,
-        "userCpf": "01234567890",
-        "userMatricula": "012345",
-        "userTelefone": "99999999999",
-        "userName": "Larissa Silva",
-        "userEmail": "larissa.silva179@fatec.sp.gov.br",
-        "userType": 2,
-        "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/012345678900.18060346807565758.jpeg"
-    },
-    {
-        "id": 28,
-        "userCpf": "12345678900",
-        "userMatricula": "a1b2c3",
-        "userTelefone": "12999999",
-        "userName": "Ana",
-        "userEmail": "ana@gmail.com",
-        "userType": 2,
-        "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/8648364840.3938095478661176.jpeg6d827d6d-651b-4eb8-9427-0216ecca4f7b.jpeg0.4829035627709067.jpeg"
-    },
-    {
-        "id": 4,
-        "userCpf": "123786789123",
-        "userMatricula": "TDX-3213S8",
-        "userTelefone": "125673649736452",
-        "userName": "Renan",
-        "userEmail": "renan@gmail.com",
-        "userType": 1,
-        "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/avatar.png"
-    }
+ "quantidade": 3
+}
+
 ```
 
+<h2> 📔 MÉTODO: GET pelo ID (AERONAVE)</h2>
 
-<h2> 📔 MÉTODO: GET pelo ID (USER)</h2>
-
-<p align="justify"> Requisição para busca e exibição de um Usuário identificado pelo seu ID no Banco de Dados, retornando o resultado no formado JSON.</p>
+<p align="justify"> Requisição para busca e exibição de uma aeronave identificado pelo seu ID no Banco de Dados, retornando o resultado no formado JSON.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
-**http://localhost:3000/user/especificoUser/32**
+**http://localhost:3001/aeronaves/9**
 
 <p align="justify"> Exemplo:</p>
 
 ```json
 {
-    "id": 32,
-    "userCpf": "01234567890",
-    "userMatricula": "012345",
-    "userTelefone": "99999999999",
-    "userName": "Larissa Silva",
-    "userEmail": "larissa.silva179@fatec.sp.gov.br",
-    "userType": 2,
-    "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/012345678900.18060346807565758.jpeg"
+ "id": 9,
+ "nome": "E3222",
+ "marca": "Embraer",
+ "ano": 2017,
+ "descricao": "Segundo",
+ "vendido": true,
+ "created": "2024-04-03T19:15:55.972Z",
+ "updated": "2024-04-04T22:21:28.000Z"
 }
 ```
 
+<h2> 📔 MÉTODO: PUT pelo ID (AERONAVE)</h2>
 
-<h2> 📔 MÉTODO: GET (E-MAIL E STATUS)</h2>
-
-<p align="justify"> Requisição que verifica o e-mail e o status do cadastro que está na parte de análise a ser feita pelo administrador. Quando criado, e-mail é disparado para que o usuário aguarde a análise. Quando aprovado, e-mail é disparado informando que cadastro foi ativado para acesso.</p>
-
-<p align="justify"> Endereço da rota:</p>
-
-**http://localhost:3000/status/renan.mendonca@fatec.sp.gov.br/1**
-
-
-<h2> 📔 MÉTODO: PUT pelo ID (EQUIPMENT)</h2>
-
-<p align="justify"> Requisição para alterar os dados de um Equipamento específico, identificado pelo seu ID no Banco de Dados.</p>
+<p align="justify"> Requisição para alterar os dados de uma aeronave específica, identificado pelo seu ID no Banco de Dados.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
-**http://localhost:3001/equipment/updateEquipment/650daa56a3c4ce65afb9b862**
+**http://localhost:3001/aeronaves/9**
 
 <p align="justify"> Exemplo:</p>
 
 ```json
 {
-    "_id": "650daa56a3c4ce65afb9b862",
-    "type": "Poste",
-    "numero": "777",
-    "serial": "145AE63", <-----
-    "latitude": "12.4569",
-    "longitude": "10.4578",
-    "observations": "Necessita de manutenção",
-    "url": [
-        "null"
-    ],
-    "status": false
+ "id": 9,
+ "nome": "E3222",
+ "marca": "Embraer",
+ "ano": 2017,
+ "descricao": "Teste",
+ "vendido": true,
+ "created": "2024-04-03T19:15:55.972Z",
+ "updated": "2024-04-04T22:21:28.000Z"
 }
+```
+<h2> 📔 MÉTODO: DELETE pelo ID (AERONAVE)</h2>
+
+<p align="justify"> Requisição para deletar uma aeronaves, retornando o resultado no formado JSON.</p>
+
+<p align="justify"> Endereço da rota:</p>
+
+**http://localhost:3001/aeronaves/18**
+
+<p align="justify"> Exemplo:</p>
+
+```json
+{
+ "nome": "2321",
+ "marca": "Boeing",
+ "ano": 2003,
+ "descricao": "dwww",
+ "vendido": false,
+ "created": "2024-04-04T16:48:10.864Z",
+ "updated": "2024-04-04T16:48:10.864Z"
+}
+
+
 ```
 
