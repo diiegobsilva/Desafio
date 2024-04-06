@@ -33,6 +33,8 @@ de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no ca
 
 <h2> 💻 Vídeo Funcionamento</h2>
 
+![](https://github.com/diiegobsilva/Desafio/blob/main/img/Funcinamento.mp4)
+
 <br>
 <h1 align="center"> Documentação das rotas</br> Entendendo a lógica da API desenvolvida neste projeto. </h1>
 <h2> 📔 MÉTODO: POST (AERONAVE)</h2>
