@@ -30,102 +30,53 @@ de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no ca
 <br>
 
 
-<h2> 📔 MÉTODO: POST (EQUIPMENT)</h2>
+<h2> 📔 MÉTODO: POST (AERONAVE)</h2>
 
-<p align="justify"> Requisição, via JSON, para a criação de um registro de um Equipamento no Banco de Dados.</p>
+<p align="justify"> Requisição, via JSON, para a criação de uma aeronave no Banco de Dados.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
-**http://localhost:3001/equipment/createEquipment**
+**http://localhost:3001/aeronaves/**
 
 <p align="justify"> Exemplo:</p>
 
 ```json
 {
-    "type":"Poste",
-    "numero":"7774",
-    "serial":"145AE1236",
-    "latitude":"12.4578",
-    "longitude":"-12.7853",
-    "observations":"Necessita de Manutenção",
-    "url":["https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/imagens/Linux.jpeg"],
-    "status":true
+  "nome": "E3222",
+  "marca": "Embraer",
+  "ano": 2017,
+  "descricao": "Segundo",
+  "vendido": true
 }
 ```
 
-<h2> 📔 MÉTODO: POST (USER)</h2>
+<h2> 📔 MÉTODO: GET (AEROANVE)</h2>
 
-<p align="justify"> Requisição, via JSON, para a criação de um registro de um Usuário no Banco de Dados.</p>
+<p align="justify"> Requisição para a listagem de todos as aeronaves cadastrados no banco, retornando os resultados no formato JSON.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
-**http://localhost:3000/user/createUser**
+**http://localhost:3001/aeronaves/**
 
 <p align="justify"> Exemplo:</p>
 
 ```json
 {
-    "userName": "Renan Vitor",
-    "userEmail": "renan.mendonca@fatec.sp.gov.br",
-    "userPassword": "$2b$10$XQ0088QjDfKG25asB2.Jbugiqwzgl1DS7HJJDp2JyYP8hPIGh/MP6",
-    "userType": 2,
-    "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/012345678900.18060346807565758.jpeg",
-    "userCpf": "41317681874",
-    "userMatricula": "012345",
-    "userTelefone": "12997647560",
-    "id": 34
+  "id": 9,
+  "nome": "E3222",
+  "marca": "Embraer",
+  "ano": 2017,
+  "descricao": "Segundo",
+  "vendido": true,
+  "created": "2024-04-03T19:15:55.972Z",
+  "updated": "2024-04-04T22:21:28.000Z" 
 }
 ```
 
 
-<h2> 📔 MÉTODO: POST (LOGIN - USER)</h2>
+<h2> 📔 MÉTODO: GET pelo parâmetro (AERONAVE)</h2>
 
-<p align="justify"> Requisição, via JSON, para o login do usuário no aplicativo</p>
-
-<p align="justify"> Endereço da rota:</p>
-
-**http://localhost:3000/user/login**
-
-<p align="justify"> Exemplo:</p>
-
-```json
-{
-    "userEmail": "renan.mendonca@fatec.sp.gov.br",
-    "userPassword": "$2b$10$XQ0088QjDfKG25asB2.Jbugiqwzgl1DS7HJJDp2JyYP8hPIGh/MP6",
-}
-```
-
-<h2> 📔 MÉTODO: GET (EQUIPMENT)</h2>
-
-<p align="justify"> Requisição para a listagem de todos os Equipamentos cadastrados no aplicativo, retornando os resultados no formado JSON.</p>
-
-<p align="justify"> Endereço da rota:</p>
-
-**http://localhost:3001/equipment/listEquipment**
-
-<p align="justify"> Exemplo:</p>
-
-```json
-{
-        "_id": "650daa56a3c4ce65afb9b862",
-        "type": "Poste",
-        "numero": "628",
-        "serial": "D-KYEUGG2877",
-        "latitude": "12.4569",
-        "longitude": "10.4578",
-        "observations": "Necessita de manutenção",
-        "url": [
-            "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/imagens/D-KYEUGG28770.19592657284536147.jpeg"
-        ],
-        "status": true
-    
-    }
-```
-
-
-<h2> 📔 MÉTODO: GET pelo ID (EQUIPMENT)</h2>
-
-<p align="justify"> Requisição para busca e exibição de um Equipamento identificado pelo seu ID no Banco de Dados, retornando o resultado no formado JSON.</p>
+<p align="justify"> Requisição para busca e exibição de Aeronave identificado pelo pelo parâmetro passado, retornando o resultado no formado JSON.</p>
 
 <p align="justify"> Endereço da rota:</p>
 
@@ -252,47 +203,3 @@ de forma errada (Exemplo: Enbraer, Boing, ErBus etc... não serão aceitos no ca
 }
 ```
 
-<h2> 📔 MÉTODO: PUT pelo ID (USER)</h2>
-
-<p align="justify"> Requisição para alterar os dados de um usuário específico, identificado pelo seu ID no Banco de Dados.</p>
-
-<p align="justify"> Endereço da rota:</p>
-
-**http://localhost:3000/user/modifyUser/32**
-
-<p align="justify"> Exemplo:</p>
-
-```json
-{
-    "id": 32,
-    "userCpf": "01234567890",
-    "userMatricula": "012345",
-    "userTelefone": "99999999999",
-    "userName": "Larissa Diniz da Silva",
-    "userEmail": "larissa.silva179@fatec.sp.gov.br",
-    "userType": 2,
-    "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/012345678900.18060346807565758.jpeg"
-}
-```
-
-<h2> 📔 MÉTODO: PUT pelo ID (MEU PERFIL)</h2>
-
-<p align="justify"> Requisição para alterar os dados de um usuário específico quando da modificação feita pela Tela - Meu Perfil, indo através do local storage inserido na tela.</p>
-
-<p align="justify"> Endereço da rota:</p>
-
-**http://localhost:3000/user/perfil/32**
-
-<p align="justify"> Exemplo:</p>
-
-```json
-{
-    "id": 32,
-    "userCpf": "01234567890",
-    "userMatricula": "012345",
-    "userTelefone": "99999999999",
-    "userName": "Larissa Diniz da Silva",
-    "userEmail": "larissa.silva179@fatec.sp.gov.br",
-    "icone": "https://cbrqdjaeurmeftioqfaz.supabase.co/storage/v1/object/public/icone/012345678900.18060346807565758.jpeg"
-}
-```
